@@ -12,6 +12,9 @@ export default {
         "2xl": "1400px",
       },
     },
+    fontFamily: {
+      sans: ['Didact Gothic', 'Century Gothic', 'CenturyGothic', 'AppleGothic', 'sans-serif'],
+    },
     extend: {
       colors: {
         border: "hsl(var(--border))",
