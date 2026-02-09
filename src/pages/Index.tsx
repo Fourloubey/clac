@@ -5,7 +5,7 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Image */}
-      <section className="w-full px-6 md:px-16 lg:px-20">
+      <section className="w-full px-0 md:px-16 lg:px-20">
         <img
           src={heroImage}
           alt="Projet architectural CLAC – façade maison contemporaine"
