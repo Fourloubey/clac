@@ -46,6 +46,7 @@ const ProjectTemplate = ({ name, description, images }: ProjectTemplateProps) =>
       <div className="w-full flex justify-center pb-16">
         <Link
           to="/projets"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="text-sm font-bold tracking-[0.15em] uppercase hover:underline underline-offset-4 decoration-black transition-all"
         >
           Retour aux projets

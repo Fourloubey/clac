@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="w-full px-6 md:px-16 lg:px-20 py-8 mt-auto">
+    <footer className="w-full px-4 md:px-16 lg:px-20 py-4 md:py-8 mt-auto">
       {/* Main row: CSS Grid 3 equal columns */}
       <div
-        className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm items-start"
+        className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-6 text-xs md:text-sm items-start leading-tight md:leading-normal"
         style={{ gridTemplateColumns: undefined }}
       >
         {/* Left */}
@@ -39,7 +39,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom row: centered legal links */}
-      <div className="flex justify-center gap-6 mt-6 text-xs text-muted-foreground">
+      <div className="flex justify-center gap-4 md:gap-6 mt-3 md:mt-6 text-[10px] md:text-xs text-muted-foreground">
         <Link to="/mentions-legales" className="hover:underline underline-offset-4">
           Mentions légales
         </Link>
