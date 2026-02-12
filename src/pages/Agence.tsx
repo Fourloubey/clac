@@ -4,7 +4,7 @@ import fondatricesImage from "@/assets/agence-fondatrices.jpg";
 const Agence = () => {
   return (
     <Layout>
-      <section className="w-full px-0 md:px-16 lg:px-20 py-12 md:py-20">
+      <section className="w-full px-0 md:px-16 lg:px-20">
         {/* Image – always on top, fixed aspect ratio */}
         <div className="w-full md:max-w-md lg:max-w-lg xl:max-w-xl md:float-right md:ml-12 md:mb-8">
           <img
