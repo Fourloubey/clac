@@ -1,12 +1,12 @@
 import ProjectTemplate from "@/components/ProjectTemplate";
 
 // 1. Importation des 8 images depuis ton dossier assets/hippolyte
-import hippolyte1 from "@/assets/hippolyte/hippolyte-1.jpg";
+import hippolyte1 from "@/assets/hippolyte/hippolyte-1.jpeg";
 import hippolyte2 from "@/assets/hippolyte/hippolyte-2.jpg";
-import hippolyte3 from "@/assets/hippolyte/hippolyte-3.jpg";
+import hippolyte3 from "@/assets/hippolyte/hippolyte-3.jpeg";
 import hippolyte4 from "@/assets/hippolyte/hippolyte-4.jpg";
 import hippolyte5 from "@/assets/hippolyte/hippolyte-5.jpg";
-import hippolyte6 from "@/assets/hippolyte/hippolyte-6.jpg";
+import hippolyte6 from "@/assets/hippolyte/hippolyte-6.jpeg";
 import hippolyte7 from "@/assets/hippolyte/hippolyte-7.jpg";
 import hippolyte8 from "@/assets/hippolyte/hippolyte-8.jpg";
 
