@@ -1,18 +1,32 @@
 import ProjectTemplate from "@/components/ProjectTemplate";
 
-const images = Array.from({ length: 6 }, (_, i) => ({
-  src: `https://i.imgur.com/PLACEHOLDER_lucien-${i + 1}.jpg`,
-  alt: `Projet Lucien – Photo ${i + 1}`,
-}));
+// 1. Importation des images depuis ton dossier assets/lucien
+import lucien1 from "@/assets/lucien/lucien-1.jpg";
+import lucien2 from "@/assets/lucien/lucien-2.jpg";
+import lucien3 from "@/assets/lucien/lucien-3.jpg";
+import lucien4 from "@/assets/lucien/lucien-4.jpg";
+import lucien5 from "@/assets/lucien/lucien-5.jpg";
+import lucien6 from "@/assets/lucien/lucien-6.jpg";
 
+// 2. Organisation du tableau pour l'affichage
+const images = [
+  { src: lucien1, alt: "Projet Lucien – Photo 1" },
+  { src: lucien2, alt: "Projet Lucien – Photo 2" },
+  { src: lucien3, alt: "Projet Lucien – Photo 3" },
+  { src: lucien4, alt: "Projet Lucien – Photo 4" },
+  { src: lucien5, alt: "Projet Lucien – Photo 5" },
+  { src: lucien6, alt: "Projet Lucien – Photo 6" },
+];
+
+// 3. Texte avec uniquement tes mots-clés en gras
 const description = [
-  "lucien",
+  <strong key="1">lucien</strong>,
   "",
-  "situation rénovation",
-  "localisation talence",
-  "surface rénovée 55.00 m²",
-  "coût 100 000 € ttc",
-  "statut livraison 2020",
+  <><strong key="2">situation</strong> rénovation</>,
+  <><strong key="3">localisation</strong> talence</>,
+  <><strong key="4">surface rénovée</strong> 55.00 m²</>,
+  <><strong key="5">coût</strong> 100 000 € ttc</>,
+  <><strong key="6">statut</strong> livraison 2020</>,
   "",
   "Cette échoppe a été entièrement repensée de façon à proposer un intérieur plus actuel grâce à l'organisation de ses espaces, aux teintes et aux matériaux choisis.",
   "",
