@@ -37,12 +37,28 @@ const Rafael = () => (
   <div className="rafael-page-container">
     <ProjectTemplate name="rafaël" description={description} images={images} />
     <style dangerouslySetInnerHTML={{ __html: `
-      /* Cible uniquement les images de la galerie pour protéger le logo */
+      /* 1. On cible UNIQUEMENT les images qui sont dans la partie "Projet" */
+      /* On exclut tout ce qui pourrait ressembler à un logo ou un header */
+      
+      .rafael-page-container main img, 
       .rafael-page-container .grid img {
         width: 100% !important;
+        height: auto !important;
         aspect-ratio: 480 / 853 !important;
         object-fit: cover !important;
         border-radius: 4px !important;
+        display: block !important;
+      }
+
+      /* 2. SECURITE : On force le logo à garder ses propriétés d'origine */
+      /* Remplace 'logo' par la classe réelle de ton logo si tu la connais */
+      .rafael-page-container header img, 
+      .rafael-page-container nav img,
+      img[src*="logo"] { 
+        aspect-ratio: auto !important;
+        width: auto !important;
+        height: auto !important;
+        object-fit: contain !important;
       }
     `}} />
   </div>
