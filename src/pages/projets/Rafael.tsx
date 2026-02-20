@@ -34,14 +34,15 @@ const description = [
 ];
 
 const Rafael = () => (
-  <div className="custom-project-grid-rafael">
+  <div className="rafael-page-container">
     <ProjectTemplate name="rafaël" description={description} images={images} />
     <style dangerouslySetInnerHTML={{ __html: `
-      .custom-project-grid-rafael img {
-        width: 100%;
-        aspect-ratio: 480 / 853; /* Ton ratio spécifique */
-        object-fit: cover;
-        border-radius: 4px;
+      /* Cible uniquement les images de la galerie pour protéger le logo */
+      .rafael-page-container .grid img {
+        width: 100% !important;
+        aspect-ratio: 480 / 853 !important;
+        object-fit: cover !important;
+        border-radius: 4px !important;
       }
     `}} />
   </div>
