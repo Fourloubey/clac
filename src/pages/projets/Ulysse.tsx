@@ -57,7 +57,7 @@ const Ulysse = () => (
         height: 100% !important;
         object-fit: cover !important;
         border-radius: 4px !important;
-        aspect-ratio: 3 / 4 !important;
+        aspect-ratio: 2 / 3 !important;
       }
 
       /* 3. CHIRURGIE : On fait prendre 2 lignes de hauteur aux grandes images (1 et 4)
