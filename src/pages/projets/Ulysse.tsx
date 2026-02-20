@@ -1,6 +1,6 @@
 import ProjectTemplate from "@/components/ProjectTemplate";
 
-// 1. Importation des 9 images
+// Importation des 9 images
 import ulysse1 from "@/assets/ulysse/ulysse-1.jpg";
 import ulysse2 from "@/assets/ulysse/ulysse-2.jpg";
 import ulysse3 from "@/assets/ulysse/ulysse-3.jpg";
@@ -11,20 +11,19 @@ import ulysse7 from "@/assets/ulysse/ulysse-7.jpg";
 import ulysse8 from "@/assets/ulysse/ulysse-8.jpg";
 import ulysse9 from "@/assets/ulysse/ulysse-9.jpg";
 
-// 2. Organisation du tableau des images
+// On remet l'ordre logique, le CSS s'occupera du placement
 const images = [
-  { src: ulysse1, alt: "Projet Ulysse – Photo 1" },
-  { src: ulysse2, alt: "Projet Ulysse – Photo 2" },
-  { src: ulysse3, alt: "Projet Ulysse – Photo 3" },
-  { src: ulysse4, alt: "Projet Ulysse – Photo 4" },
-  { src: ulysse5, alt: "Projet Ulysse – Photo 5" },
-  { src: ulysse6, alt: "Projet Ulysse – Photo 6" },
-  { src: ulysse7, alt: "Projet Ulysse – Photo 7" },
-  { src: ulysse8, alt: "Projet Ulysse – Photo 8" },
-  { src: ulysse9, alt: "Projet Ulysse – Photo 9" },
+  { src: ulysse1, alt: "1" },
+  { src: ulysse2, alt: "2" },
+  { src: ulysse3, alt: "3" },
+  { src: ulysse4, alt: "4" },
+  { src: ulysse6, alt: "6" },
+  { src: ulysse7, alt: "7" },
+  { src: ulysse8, alt: "8" },
+  { src: ulysse9, alt: "9 (ex-5)" }, // Inversion demandée
+  { src: ulysse5, alt: "5 (ex-9)" }, // Inversion demandée
 ];
 
-// 3. Texte avec tes mots-clés en gras
 const description = [
   <strong key="1">ulysse</strong>,
   "",
@@ -41,7 +40,41 @@ const description = [
 ];
 
 const Ulysse = () => (
-  <ProjectTemplate name="ulysse" description={description} images={images} />
+  <div className="ulysse-special-grid">
+    <ProjectTemplate name="ulysse" description={description} images={images} />
+    <style dangerouslySetInnerHTML={{ __html: `
+      /* 1. On définit la structure de la grille globale */
+      .ulysse-special-grid .grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        grid-auto-flow: dense !important;
+        gap: 1rem !important;
+      }
+
+      /* 2. On définit le ratio de base pour les grandes images */
+      .ulysse-special-grid img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 4px !important;
+        aspect-ratio: 3 / 4 !important;
+      }
+
+      /* 3. CHIRURGIE : On fait prendre 2 lignes de hauteur aux grandes images (1 et 4)
+         pour que les petites (2 et 3) puissent s'empiler à côté */
+      .ulysse-special-grid .grid > div:nth-child(1),
+      .ulysse-special-grid .grid > div:nth-child(4) {
+        grid-row: span 2 !important;
+      }
+
+      /* 4. On ajuste les "petites" images (2 et 3) pour qu'elles n'aient pas de ratio forcé
+         mais qu'elles remplissent l'espace restant */
+      .ulysse-special-grid .grid > div:nth-child(2) img,
+      .ulysse-special-grid .grid > div:nth-child(3) img {
+        aspect-ratio: 3 / 1.9 !important; /* Ratio réduit pour tenir à deux dans la colonne */
+      }
+    `}} />
+  </div>
 );
 
 export default Ulysse;
