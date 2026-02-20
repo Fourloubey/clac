@@ -1,5 +1,6 @@
 import ProjectTemplate from "@/components/ProjectTemplate";
 
+// 1. Importation des 9 images
 import ulysse1 from "@/assets/ulysse/ulysse-1.jpg";
 import ulysse2 from "@/assets/ulysse/ulysse-2.jpg";
 import ulysse3 from "@/assets/ulysse/ulysse-3.jpg";
@@ -10,19 +11,20 @@ import ulysse7 from "@/assets/ulysse/ulysse-7.jpg";
 import ulysse8 from "@/assets/ulysse/ulysse-8.jpg";
 import ulysse9 from "@/assets/ulysse/ulysse-9.jpg";
 
-// On garde l'ordre logique pour le flux
+// 2. Organisation du tableau (5 et 9 sont ici échangées)
 const images = [
-  { src: ulysse1, alt: "1" },
-  { src: ulysse2, alt: "2" },
-  { src: ulysse3, alt: "3" },
-  { src: ulysse4, alt: "4" },
-  { src: ulysse9, alt: "9" },
-  { src: ulysse6, alt: "6" },
-  { src: ulysse7, alt: "7" },
-  { src: ulysse8, alt: "8" }, 
-  { src: ulysse5, alt: "5" },
+  { src: ulysse1, alt: "Projet Ulysse – Photo 1" },
+  { src: ulysse2, alt: "Projet Ulysse – Photo 2" },
+  { src: ulysse3, alt: "Projet Ulysse – Photo 3" },
+  { src: ulysse4, alt: "Projet Ulysse – Photo 4" },
+  { src: ulysse9, alt: "Projet Ulysse – Photo 9 (ex-5)" }, 
+  { src: ulysse6, alt: "Projet Ulysse – Photo 6" },
+  { src: ulysse7, alt: "Projet Ulysse – Photo 7" },
+  { src: ulysse8, alt: "Projet Ulysse – Photo 8" },
+  { src: ulysse5, alt: "Projet Ulysse – Photo 5 (ex-9)" },
 ];
 
+// 3. Texte original
 const description = [
   <strong key="1">ulysse</strong>,
   "",
@@ -39,51 +41,7 @@ const description = [
 ];
 
 const Ulysse = () => (
-  <div className="ulysse-master-container">
-    <ProjectTemplate name="ulysse" description={description} images={images} />
-    
-    <style dangerouslySetInnerHTML={{ __html: `
-      /* 1. PROTECTION DU LOGO : On cible uniquement les images dans le header ou portant une classe logo */
-      .ulysse-master-container header img, 
-      .ulysse-master-container nav img,
-      .ulysse-master-container [class*="logo"] img {
-        width: auto !important;
-        height: auto !important;
-        aspect-ratio: auto !important;
-        max-height: 80px; /* Ajuste selon la taille de ton logo */
-      }
-
-      /* 2. LA GRILLE : On cible la div qui contient les images dans ProjectTemplate */
-      .ulysse-master-container .grid {
-        display: grid !important;
-        grid-template-columns: repeat(3, 1fr) !important;
-        grid-auto-flow: dense !important;
-        gap: 20px !important;
-      }
-
-      /* 3. STYLE DES IMAGES */
-      .ulysse-master-container .grid img {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover !important;
-        aspect-ratio: 3 / 4 !important;
-        border-radius: 4px;
-      }
-
-      /* 4. CHIRURGIE DES CASES */
-      /* La photo 1 et la 4 (situées dans des div enfants de la grille) s'étendent */
-      .ulysse-master-container .grid > div:nth-child(1),
-      .ulysse-master-container .grid > div:nth-child(4) {
-        grid-row: span 2 !important;
-      }
-
-      /* Ajustement du ratio pour les photos 2 et 3 qui s'empilent */
-      .ulysse-master-container .grid > div:nth-child(2) img,
-      .ulysse-master-container .grid > div:nth-child(3) img {
-        aspect-ratio: 3 / 1.9 !important;
-      }
-    `}} />
-  </div>
+  <ProjectTemplate name="ulysse" description={description} images={images} />
 );
 
 export default Ulysse;
