@@ -26,13 +26,16 @@ const images = [
 const description = [
   <strong key="1">hippolyte</strong>,
   "",
-  <><strong key="2">situation</strong> texte</>,
-  <><strong key="3">localisation</strong> texte</>,
-  <><strong key="4">surface créée</strong> texte</>,
-  <><strong key="5">coût</strong> texte</>,
-  <><strong key="6">statut</strong> texte</>,
+  <><strong key="2">situation</strong> rénovation et extension</>,
+  <><strong key="3">localisation</strong> pessac</>,
+  <><strong key="4">surface créée</strong> 40.00 m2</>,
+  <><strong key="4">surface rénovée</strong> 60.00 m2</>,
+  <><strong key="5">coût</strong> 220 000 € ttc</>,
+  <><strong key="6">statut</strong>  livraison 2024</>,
   "",
-  "texte texte texte",
+  "La rénovation de la partie existante a été envisagée dans une approche sobre et épurée privilégiant des tonalités claires afin de valoriser l'en semble du mobilier bois sur mesure.",
+  "",
+  "Le volume nouvellement créé, accueillant la pièce de vie, a été conçu comme une entité distincte du bâti principal, tout en maintenant un dialogue cohérent avec celui-ci. Le choix d'un enduit à la chaux de teinte naturelle terre battue avec une finition peignée horizontale et verticale anime la surface et renforce le caractère de l'intervention.",
 ];
 
 const Hippolyte = () => (
