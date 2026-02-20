@@ -29,9 +29,9 @@ const description = [
   <><strong key="2">situation</strong> rénovation et extension</>,
   <><strong key="3">localisation</strong> pessac</>,
   <><strong key="4">surface créée</strong> 40.00 m2</>,
-  <><strong key="4">surface rénovée</strong> 60.00 m2</>,
-  <><strong key="5">coût</strong> 220 000 € ttc</>,
-  <><strong key="6">statut</strong>  livraison 2024</>,
+  <><strong key="5">surface rénovée</strong> 60.00 m2</>,
+  <><strong key="6">coût</strong> 220 000 € ttc</>,
+  <><strong key="7">statut</strong>  livraison 2024</>,
   "",
   "La rénovation de la partie existante a été envisagée dans une approche sobre et épurée privilégiant des tonalités claires afin de valoriser l'en semble du mobilier bois sur mesure.",
   "",
@@ -39,7 +39,17 @@ const description = [
 ];
 
 const Hippolyte = () => (
-  <ProjectTemplate name="hippolyte" description={description} images={images} />
+  <div className="custom-project-grid">
+    <ProjectTemplate name="hippolyte" description={description} images={images} />
+    <style dangerouslySetInnerHTML={{ __html: `
+      .custom-project-grid img {
+        width: 100%;
+        aspect-ratio: 3 / 4; /* Définit le ratio intrinsèque 3:4 */
+        object-fit: cover;   /* Remplit le cadre sans déformation */
+        border-radius: 4px;
+      }
+    `}} />
+  </div>
 );
 
 export default Hippolyte;
