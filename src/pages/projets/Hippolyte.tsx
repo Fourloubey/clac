@@ -39,14 +39,15 @@ const description = [
 ];
 
 const Hippolyte = () => (
-  <div className="custom-project-grid">
+  <div className="hippo-page-container">
     <ProjectTemplate name="hippolyte" description={description} images={images} />
     <style dangerouslySetInnerHTML={{ __html: `
-      .custom-project-grid img {
-        width: 100%;
-        aspect-ratio: 3 / 4; /* Définit le ratio intrinsèque 3:4 */
-        object-fit: cover;   /* Remplit le cadre sans déformation */
-        border-radius: 4px;
+      /* On cible uniquement les images à l'intérieur de la grille de ProjectTemplate */
+      .hippo-page-container .grid img {
+        width: 100% !important;
+        aspect-ratio: 3 / 4 !important;
+        object-fit: cover !important;
+        border-radius: 4px !important;
       }
     `}} />
   </div>
