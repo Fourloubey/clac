@@ -34,7 +34,17 @@ const description = [
 ];
 
 const Rafael = () => (
-  <ProjectTemplate name="rafaël" description={description} images={images} />
+  <div className="custom-project-grid-rafael">
+    <ProjectTemplate name="rafaël" description={description} images={images} />
+    <style dangerouslySetInnerHTML={{ __html: `
+      .custom-project-grid-rafael img {
+        width: 100%;
+        aspect-ratio: 480 / 853; /* Ton ratio spécifique */
+        object-fit: cover;
+        border-radius: 4px;
+      }
+    `}} />
+  </div>
 );
 
 export default Rafael;
