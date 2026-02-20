@@ -41,7 +41,27 @@ const description = [
 ];
 
 const Ulysse = () => (
-  <ProjectTemplate name="ulysse" description={description} images={images} />
+  <div className="ulysse-safe-container">
+    <ProjectTemplate name="ulysse" description={description} images={images} />
+    
+    <style dangerouslySetInnerHTML={{ __html: `
+      /* On ne cible que les images qui sont DEEP dans la grille de description */
+      /* Cela évite de toucher au logo ou aux éléments de navigation */
+      .ulysse-safe-container .grid img {
+        width: 100% !important;
+        aspect-ratio: 211 / 375 !important;
+        object-fit: cover !important;
+        border-radius: 4px !important;
+      }
+
+      /* Sécurité supplémentaire pour le logo au cas où */
+      .ulysse-safe-container header img, 
+      .ulysse-safe-container nav img {
+        aspect-ratio: auto !important;
+        width: auto !important;
+      }
+    `}} />
+  </div>
 );
 
 export default Ulysse;
