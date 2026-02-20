@@ -17,11 +17,11 @@ const images = [
   { src: ulysse2, alt: "2" },
   { src: ulysse3, alt: "3" },
   { src: ulysse4, alt: "4" },
+  { src: ulysse9, alt: "9" },
   { src: ulysse6, alt: "6" },
   { src: ulysse7, alt: "7" },
   { src: ulysse8, alt: "8" },
-  { src: ulysse9, alt: "9 (ex-5)" }, // Inversion demandée
-  { src: ulysse5, alt: "5 (ex-9)" }, // Inversion demandée
+  { src: ulysse5, alt: "5" }, 
 ];
 
 const description = [
@@ -40,38 +40,44 @@ const description = [
 ];
 
 const Ulysse = () => (
-  <div className="ulysse-special-grid">
+  <div className="ulysse-page-container">
     <ProjectTemplate name="ulysse" description={description} images={images} />
     <style dangerouslySetInnerHTML={{ __html: `
-      /* 1. On définit la structure de la grille globale */
-      .ulysse-special-grid .grid {
+      /* 1. PROTECTION LOGO (Comme sur Rafael) */
+      .ulysse-page-container header img, 
+      .ulysse-page-container nav img,
+      img[src*="logo"] { 
+        aspect-ratio: auto !important;
+        width: auto !important;
+        height: auto !important;
+      }
+
+      /* 2. GRILLE DE BASE */
+      .ulysse-page-container .grid {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
         grid-auto-flow: dense !important;
-        gap: 1rem !important;
       }
 
-      /* 2. On définit le ratio de base pour les grandes images */
-      .ulysse-special-grid img {
+      /* 3. RATIO DES IMAGES STANDARDS */
+      .ulysse-page-container .grid img {
         width: 100% !important;
-        height: 100% !important;
+        aspect-ratio: 3 / 4 !important;
         object-fit: cover !important;
-        border-radius: 4px !important;
-        aspect-ratio: 2 / 3 !important;
       }
 
-      /* 3. CHIRURGIE : On fait prendre 2 lignes de hauteur aux grandes images (1 et 4)
-         pour que les petites (2 et 3) puissent s'empiler à côté */
-      .ulysse-special-grid .grid > div:nth-child(1),
-      .ulysse-special-grid .grid > div:nth-child(4) {
+      /* 4. CHIRURGIE : La 1 et la 4 prennent 2 rangées */
+      /* Dans la grille, ce sont les enfants 1 et 4 du conteneur grid */
+      .ulysse-page-container .grid > div:nth-child(1),
+      .ulysse-page-container .grid > div:nth-child(4) {
         grid-row: span 2 !important;
       }
 
-      /* 4. On ajuste les "petites" images (2 et 3) pour qu'elles n'aient pas de ratio forcé
-         mais qu'elles remplissent l'espace restant */
-      .ulysse-special-grid .grid > div:nth-child(2) img,
-      .ulysse-special-grid .grid > div:nth-child(3) img {
-        aspect-ratio: 3 / 1.9 !important; /* Ratio réduit pour tenir à deux dans la colonne */
+      /* 5. AJUSTEMENT DES PETITES (2 et 3) */
+      /* Elles doivent avoir un ratio plus court pour s'empiler à deux */
+      .ulysse-page-container .grid > div:nth-child(2) img,
+      .ulysse-page-container .grid > div:nth-child(3) img {
+        aspect-ratio: 3 / 1.95 !important;
       }
     `}} />
   </div>
