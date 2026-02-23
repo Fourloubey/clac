@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
+import emailjs from "@emailjs/browser"; // Ajout de l'import
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -7,17 +8,20 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
-    const data = new FormData(form);
 
     try {
-      await fetch("https://formspree.io/f/YOUR_FORM_ID", {
-        method: "POST",
-        body: data,
-        headers: { Accept: "application/json" },
-      });
+      // On utilise sendForm directement avec tes IDs
+      await emailjs.sendForm(
+        "service_ncx8z0r",
+        "template_llurby3",
+        form,
+        "nmA1pZM4NdIibKVSC"
+      );
+      
       setSubmitted(true);
       form.reset();
-    } catch {
+    } catch (error) {
+      console.error("EmailJS Error:", error);
       alert("Une erreur est survenue. Veuillez réessayer.");
     }
   };
