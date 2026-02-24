@@ -43,6 +43,8 @@ const Footer = () => {
         <Link to="/mentions-legales" className="hover:underline underline-offset-4">
           Mentions légales
         </Link>
+        {/* Signature Kineos-Digital */}
+        <span>Kineos-Digital</span>
         <Link to="/politique-de-confidentialite" className="hover:underline underline-offset-4">
           Politique de confidentialité
         </Link>
