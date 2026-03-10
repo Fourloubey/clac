@@ -10,12 +10,12 @@ import leon6 from "@/assets/leon/leon-6.jpg";
 
 // 2. Organisation du tableau pour l'affichage
 const images = [
-  { src: leon1, alt: "Projet Léon – Photo 1" },
-  { src: leon2, alt: "Projet Léon – Photo 2" },
-  { src: leon3, alt: "Projet Léon – Photo 3" },
-  { src: leon4, alt: "Projet Léon – Photo 4" },
-  { src: leon5, alt: "Projet Léon – Photo 5" },
-  { src: leon6, alt: "Projet Léon – Photo 6" },
+  { src: leon1, alt: "Projet Léon – Extension Ossature Bois sur Jardin Saint Genes Photo 1" },
+  { src: leon2, alt: "Projet Léon – Extension Ossature Bois sur Jardin Saint Genes Photo 2" },
+  { src: leon3, alt: "Projet Léon – Extension Ossature Bois sur Jardin Saint Genes Photo 3" },
+  { src: leon4, alt: "Projet Léon – Extension Ossature Bois sur Jardin Saint Genes Photo 4" },
+  { src: leon5, alt: "Projet Léon – Extension Ossature Bois sur Jardin Saint Genes Photo 5" },
+  { src: leon6, alt: "Projet Léon – Extension Ossature Bois sur Jardin Saint Genes Photo 6" },
 ];
 
 // 3. Texte avec uniquement tes mots-clés en gras
