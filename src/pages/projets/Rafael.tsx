@@ -10,12 +10,12 @@ import rafael6 from "@/assets/rafael/rafael-6.jpg";
 
 // 2. Organisation du tableau pour l'affichage
 const images = [
-  { src: rafael1, alt: "Projet Rafaël – Vue 1" },
-  { src: rafael2, alt: "Projet Rafaël – Vue 2" },
-  { src: rafael3, alt: "Projet Rafaël – Vue 3" },
-  { src: rafael4, alt: "Projet Rafaël – Vue 4" },
-  { src: rafael5, alt: "Projet Rafaël – Vue 5" },
-  { src: rafael6, alt: "Projet Rafaël – Vue 6" },
+  { src: rafael1, alt: "Projet Rafaël – Extension Maison Bordelaise Vue 1" },
+  { src: rafael2, alt: "Projet Rafaël – Extension Maison Bordelaise Vue 2" },
+  { src: rafael3, alt: "Projet Rafaël – Extension Maison Bordelaise Vue 3" },
+  { src: rafael4, alt: "Projet Rafaël – Extension Maison Bordelaise Vue 4" },
+  { src: rafael5, alt: "Projet Rafaël – Extension Maison Bordelaise Vue 5" },
+  { src: rafael6, alt: "Projet Rafaël – Extension Maison Bordelaise Vue 6" },
 ];
 
 // 3. Texte avec uniquement tes mots-clés en gras
