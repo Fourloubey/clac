@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: "/clac/", // Vérifiez bien qu'il n'y a pas d'espace avant ou après
+  base: "/", // Vérifiez bien qu'il n'y a pas d'espace avant ou après
   server: {
     host: "::",
     port: 8080,
