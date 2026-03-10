@@ -10,12 +10,12 @@ import lucien6 from "@/assets/lucien/lucien-6.jpg";
 
 // 2. Organisation du tableau pour l'affichage
 const images = [
-  { src: lucien1, alt: "Projet Lucien – Photo 1" },
-  { src: lucien2, alt: "Projet Lucien – Photo 2" },
-  { src: lucien3, alt: "Projet Lucien – Photo 3" },
-  { src: lucien4, alt: "Projet Lucien – Photo 4" },
-  { src: lucien5, alt: "Projet Lucien – Photo 5" },
-  { src: lucien6, alt: "Projet Lucien – Photo 6" },
+  { src: lucien1, alt: "Projet Lucien – Rénovation échoppe Bordeaux Photo 1" },
+  { src: lucien2, alt: "Projet Lucien – Rénovation échoppe Bordeaux Photo 2" },
+  { src: lucien3, alt: "Projet Lucien – Rénovation échoppe Bordeaux Photo 3" },
+  { src: lucien4, alt: "Projet Lucien – Rénovation échoppe Bordeaux Photo 4" },
+  { src: lucien5, alt: "Projet Lucien – Rénovation échoppe Bordeaux Photo 5" },
+  { src: lucien6, alt: "Projet Lucien – Rénovation échoppe Bordeaux Photo 6" },
 ];
 
 // 3. Texte avec uniquement tes mots-clés en gras
