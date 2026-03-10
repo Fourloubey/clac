@@ -12,14 +12,14 @@ import hippolyte8 from "@/assets/hippolyte/hippolyte-8.jpg";
 
 // 2. Organisation du tableau pour l'affichage
 const images = [
-  { src: hippolyte1, alt: "Projet Hippolyte – Photo 1" },
-  { src: hippolyte2, alt: "Projet Hippolyte – Photo 2" },
-  { src: hippolyte3, alt: "Projet Hippolyte – Photo 3" },
-  { src: hippolyte4, alt: "Projet Hippolyte – Photo 4" },
-  { src: hippolyte5, alt: "Projet Hippolyte – Photo 5" },
-  { src: hippolyte6, alt: "Projet Hippolyte – Photo 6" },
-  { src: hippolyte7, alt: "Projet Hippolyte – Photo 7" },
-  { src: hippolyte8, alt: "Projet Hippolyte – Photo 8" },
+  { src: hippolyte1, alt: "Projet Hippolyte – Extension Enduit texturé à Pessac Photo 1" },
+  { src: hippolyte2, alt: "Projet Hippolyte – Extension Enduit texturé à Pessac Photo 2" },
+  { src: hippolyte3, alt: "Projet Hippolyte – Extension Enduit texturé à Pessac Photo 3" },
+  { src: hippolyte4, alt: "Projet Hippolyte – Extension Enduit texturé à Pessac Photo 4" },
+  { src: hippolyte5, alt: "Projet Hippolyte – Extension Enduit texturé à Pessac Photo 5" },
+  { src: hippolyte6, alt: "Projet Hippolyte – Extension Enduit texturé à Pessac Photo 6" },
+  { src: hippolyte7, alt: "Projet Hippolyte – Extension Enduit texturé à Pessac Photo 7" },
+  { src: hippolyte8, alt: "Projet Hippolyte – Extension Enduit texturé à Pessac Photo 8" },
 ];
 
 // 3. Texte avec uniquement tes mots-clés en gras
