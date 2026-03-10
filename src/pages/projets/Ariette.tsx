@@ -19,11 +19,11 @@ import ariette15 from "@/assets/ariette/ariette-15.jpg";
 
 // 2. Ton ordre spécifique : 4, 2, 3, 1, 5, 6, 7, 8, 9, 10, 15, 12, 13, 14, 11
 const images = [
-  { src: ariette4, alt: "4" }, { src: ariette2, alt: "2" }, { src: ariette3, alt: "3" }, // Ligne 1
-  { src: ariette1, alt: "1" }, { src: ariette5, alt: "5" }, { src: ariette6, alt: "6" }, // Ligne 2
-  { src: ariette7, alt: "7" }, { src: ariette8, alt: "8" }, { src: ariette9, alt: "9" }, // Ligne 3
-  { src: ariette10, alt: "10" }, { src: ariette15, alt: "15" }, { src: ariette12, alt: "12" }, // Ligne 4
-  { src: ariette13, alt: "13" }, { src: ariette14, alt: "14" }, { src: ariette11, alt: "11" }, // Ligne 5
+  { src: ariette4, alt: "4 Extension Béton Ciré à Dax, photo Agnès Clotis" }, { src: ariette2, alt: "2 Extension Béton Ciré à Dax, photo Agnès Clotis" }, { src: ariette3, alt: "3 Extension Béton Ciré à Dax, photo Agnès Clotis" }, // Ligne 1
+  { src: ariette1, alt: "1 Extension Béton Ciré à Dax, photo Agnès Clotis" }, { src: ariette5, alt: "5 Extension Béton Ciré à Dax, photo Agnès Clotis" }, { src: ariette6, alt: "6 Extension Béton Ciré à Dax, photo Agnès Clotis" }, // Ligne 2
+  { src: ariette7, alt: "7 Extension Béton Ciré à Dax, photo Agnès Clotis" }, { src: ariette8, alt: "8 Extension Béton Ciré à Dax, photo Agnès Clotis" }, { src: ariette9, alt: "9 Extension Béton Ciré à Dax, photo Agnès Clotis" }, // Ligne 3
+  { src: ariette10, alt: "10 Extension Béton Ciré à Dax, photo Agnès Clotis" }, { src: ariette15, alt: "15 Extension Béton Ciré à Dax, photo Agnès Clotis" }, { src: ariette12, alt: "12 Extension Béton Ciré à Dax, photo Agnès Clotis" }, // Ligne 4
+  { src: ariette13, alt: "13 Extension Béton Ciré à Dax, photo Agnès Clotis" }, { src: ariette14, alt: "14 Extension Béton Ciré à Dax, photo Agnès Clotis" }, { src: ariette11, alt: "11 Extension Béton Ciré à Dax, photo Agnès Clotis" }, // Ligne 5
 ];
 
 // 3. Texte avec tes mots-clés en gras
