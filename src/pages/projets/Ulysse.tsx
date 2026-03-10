@@ -13,15 +13,15 @@ import ulysse9 from "@/assets/ulysse/ulysse-9.jpg";
 
 // 2. Organisation du tableau (5 et 9 sont ici échangées)
 const images = [
-  { src: ulysse1, alt: "Projet Ulysse – Photo 1" },
-  { src: ulysse2, alt: "Projet Ulysse – Photo 2" },
-  { src: ulysse3, alt: "Projet Ulysse – Photo 3" },
-  { src: ulysse4, alt: "Projet Ulysse – Photo 4" },
-  { src: ulysse9, alt: "Projet Ulysse – Photo 9 (ex-5)" }, 
-  { src: ulysse6, alt: "Projet Ulysse – Photo 6" },
-  { src: ulysse7, alt: "Projet Ulysse – Photo 7" },
-  { src: ulysse8, alt: "Projet Ulysse – Photo 8" },
-  { src: ulysse5, alt: "Projet Ulysse – Photo 5 (ex-9)" },
+  { src: ulysse1, alt: "Projet Ulysse – Surélévation Pierre Bordelaise à Bordeaux avec verriere Photo 1" },
+  { src: ulysse2, alt: "Projet Ulysse – Surélévation Pierre Bordelaise à Bordeaux avec verriere Photo 2" },
+  { src: ulysse3, alt: "Projet Ulysse – Surélévation Pierre Bordelaise à Bordeaux avec verriere Photo 3" },
+  { src: ulysse4, alt: "Projet Ulysse – Surélévation Pierre Bordelaise à Bordeaux avec verriere Photo 4" },
+  { src: ulysse9, alt: "Projet Ulysse – Surélévation Pierre Bordelaise à Bordeaux avec verriere Photo 9 (ex-5)" }, 
+  { src: ulysse6, alt: "Projet Ulysse – Surélévation Pierre Bordelaise à Bordeaux avec verriere Photo 6" },
+  { src: ulysse7, alt: "Projet Ulysse – Surélévation Pierre Bordelaise à Bordeaux avec verriere Photo 7" },
+  { src: ulysse8, alt: "Projet Ulysse – Surélévation Pierre Bordelaise à Bordeaux avec verriere Photo 8" },
+  { src: ulysse5, alt: "Projet Ulysse – Surélévation Pierre Bordelaise à Bordeaux avec verriere Photo 5 (ex-9)" },
 ];
 
 // 3. Texte original
