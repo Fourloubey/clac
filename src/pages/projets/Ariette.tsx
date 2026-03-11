@@ -45,7 +45,22 @@ const Ariette = () => (
   <div className="ariette-master-container">
     <ProjectTemplate name="ariette" description={description} images={images} />
     
+    {/* Crédit Photo ajouté ici */}
+    <div className="photo-credits">
+      crédits photos © Agnès Clotis
+    </div>
+    
     <style dangerouslySetInnerHTML={{ __html: `
+      /* Style pour le crédit photo */
+      .photo-credits {
+        text-align: right;
+        font-size: 0.8rem;
+        color: #666;
+        margin-top: 10px;
+        padding-right: 10px;
+        font-style: italic;
+      }
+      
       /* Protection du Logo */
       .ariette-master-container header img, 
       .ariette-master-container nav img,
