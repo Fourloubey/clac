@@ -1,6 +1,6 @@
 import ProjectTemplate from "@/components/ProjectTemplate";
 
-// 1. Importation des images depuis ton dossier assets/lucien
+// 1. Importation des images
 import lucien1 from "@/assets/lucien/lucien-1.jpg";
 import lucien2 from "@/assets/lucien/lucien-2.jpg";
 import lucien3 from "@/assets/lucien/lucien-3.jpg";
@@ -8,7 +8,7 @@ import lucien4 from "@/assets/lucien/lucien-4.jpg";
 import lucien5 from "@/assets/lucien/lucien-5.jpg";
 import lucien6 from "@/assets/lucien/lucien-6.jpg";
 
-// 2. Organisation du tableau pour l'affichage
+// 2. Organisation du tableau
 const images = [
   { src: lucien1, alt: "Projet Lucien – Rénovation échoppe Bordeaux Photo 1" },
   { src: lucien2, alt: "Projet Lucien – Rénovation échoppe Bordeaux Photo 2" },
@@ -18,7 +18,7 @@ const images = [
   { src: lucien6, alt: "Projet Lucien – Rénovation échoppe Bordeaux Photo 6" },
 ];
 
-// 3. Texte avec uniquement tes mots-clés en gras
+// 3. Texte de description
 const description = [
   <strong key="1">lucien</strong>,
   "",
@@ -34,7 +34,38 @@ const description = [
 ];
 
 const Lucien = () => (
-  <ProjectTemplate name="lucien" description={description} images={images} />
+  <div className="lucien-master-container">
+    <ProjectTemplate name="lucien" description={description} images={images} />
+
+    <style dangerouslySetInnerHTML={{ __html: `
+      /* 1. Insertion du Crédit Photo sous la 6ème image (la dernière) */
+      .lucien-master-container .grid > div:nth-child(6)::after {
+        content: "crédits photos © Loumely Photographie";
+        display: block;
+        text-align: right;
+        font-size: 10px;
+        color: #333;
+        margin-top: 8px;
+        font-family: sans-serif;
+        font-style: italic;
+      }
+
+      /* 2. Protection du Logo (évite les déformations si présent) */
+      .lucien-master-container header img, 
+      .lucien-master-container nav img,
+      img[src*="logo"] { 
+        aspect-ratio: auto !important;
+        width: auto !important;
+      }
+
+      /* 3. Base de la grille pour Lucien */
+      .lucien-master-container .grid img {
+        width: 100% !important;
+        object-fit: cover !important;
+        border-radius: 4px !important;
+      }
+    `}} />
+  </div>
 );
 
 export default Lucien;
