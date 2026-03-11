@@ -1,5 +1,8 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const routes = ['agence', 'projets', 'contact',
   'projets/rafael',
@@ -9,6 +12,7 @@ const routes = ['agence', 'projets', 'contact',
   'projets/ulysse',
   'projets/ariette'
 ];
+
 const distPath = path.join(__dirname, 'dist');
 const template = fs.readFileSync(path.join(distPath, 'index.html'), 'utf8');
 
@@ -17,8 +21,7 @@ routes.forEach(route => {
   if (!fs.existsSync(routePath)) {
     fs.mkdirSync(routePath, { recursive: true });
   }
-  // On copie l'index.html dans chaque dossier
   fs.writeFileSync(path.join(routePath, 'index.html'), template);
 });
 
-console.log('Routes générées physiquement pour le SEO !');
+console.log('✅ Routes générées physiquement (ESM) !');
