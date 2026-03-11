@@ -23,7 +23,7 @@ const images = [
   { src: ariette1, alt: "1 Extension Béton Ciré à Dax, photo Agnès Clotis" }, { src: ariette5, alt: "5 Extension Béton Ciré à Dax, photo Agnès Clotis" }, { src: ariette6, alt: "6 Extension Béton Ciré à Dax, photo Agnès Clotis" }, // Ligne 2
   { src: ariette7, alt: "7 Extension Béton Ciré à Dax, photo Agnès Clotis" }, { src: ariette8, alt: "8 Extension Béton Ciré à Dax, photo Agnès Clotis" }, { src: ariette9, alt: "9 Extension Béton Ciré à Dax, photo Agnès Clotis" }, // Ligne 3
   { src: ariette10, alt: "10 Extension Béton Ciré à Dax, photo Agnès Clotis" }, { src: ariette15, alt: "15 Extension Béton Ciré à Dax, photo Agnès Clotis" }, { src: ariette12, alt: "12 Extension Béton Ciré à Dax, photo Agnès Clotis" }, // Ligne 4
-  { src: ariette13, alt: "13 Extension Béton Ciré à Dax, photo Agnès Clotis" }, { src: ariette14, alt: "14 Extension Béton Ciré à Dax, photo Agnès Clotis" }, { src: ariette11, alt: "11 Extension Béton Ciré à Dax, photo Agnès Clotis,
+  { src: ariette13, alt: "13 Extension Béton Ciré à Dax, photo Agnès Clotis" }, { src: ariette14, alt: "14 Extension Béton Ciré à Dax, photo Agnès Clotis" }, { src: ariette11, alt: "11 Extension Béton Ciré à Dax, photo Agnès Clotis",
     caption: <div className="photo-credit-label">crédits photos © Agnès Clotis</div> }, // Ligne 5 modifiée
 ];
 
