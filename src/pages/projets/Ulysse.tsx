@@ -11,7 +11,7 @@ import ulysse7 from "@/assets/ulysse/ulysse-7.jpg";
 import ulysse8 from "@/assets/ulysse/ulysse-8.jpg";
 import ulysse9 from "@/assets/ulysse/ulysse-9.jpg";
 
-// 2. Organisation du tableau (5 et 9 sont ici échangées)
+// 2. Organisation du tableau
 const images = [
   { src: ulysse1, alt: "Projet Ulysse – Surélévation Pierre Bordelaise à Bordeaux avec verriere Photo 1" },
   { src: ulysse2, alt: "Projet Ulysse – Surélévation Pierre Bordelaise à Bordeaux avec verriere Photo 2" },
@@ -45,8 +45,19 @@ const Ulysse = () => (
     <ProjectTemplate name="ulysse" description={description} images={images} />
     
     <style dangerouslySetInnerHTML={{ __html: `
-      /* On ne cible que les images qui sont DEEP dans la grille de description */
-      /* Cela évite de toucher au logo ou aux éléments de navigation */
+      /* 1. Insertion du Crédit Photo sous la 9ème image */
+      .ulysse-safe-container .grid > div:nth-child(9)::after {
+        content: "crédits photos © Loumely Photographie";
+        display: block;
+        text-align: right;
+        font-size: 10px;
+        color: #333;
+        margin-top: 8px;
+        font-family: sans-serif;
+        font-style: italic;
+      }
+
+      /* 2. Style des images de la grille */
       .ulysse-safe-container .grid img {
         width: 100% !important;
         aspect-ratio: 211 / 375 !important;
@@ -54,7 +65,7 @@ const Ulysse = () => (
         border-radius: 4px !important;
       }
 
-      /* Sécurité supplémentaire pour le logo au cas où */
+      /* 3. Sécurité pour le logo et la navigation */
       .ulysse-safe-container header img, 
       .ulysse-safe-container nav img {
         aspect-ratio: auto !important;
